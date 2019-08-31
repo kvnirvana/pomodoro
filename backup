@@ -1,0 +1,71 @@
+// Event listeners
+document.getElementById("play").addEventListener("click", play);
+document.getElementById("pause").addEventListener("click", pause);
+document.getElementById("workAdd").addEventListener("click", incrementWork);
+document.getElementById("workDecrement").addEventListener("click", decrementWork);
+document.getElementById("breakAdd").addEventListener("click", incrementBreak);
+document.getElementById("breakDecrement").addEventListener("click", decrementBreak);
+document.getElementById("reset").addEventListener("click", reset);
+
+
+
+
+
+
+// Variables
+
+
+let workTime = 25
+let breakTime = 5
+
+document.getElementById('workframe').textContent = workTime;
+document.getElementById('breakframe').textContent = breakTime
+
+// Functions
+
+    document.getElementById('number').textContent = workTime;
+
+
+   function play() {
+        myTimer = setInterval(myClock, 1000);
+    }
+
+    function pause() {
+        clearInterval(myTimer);
+    }
+
+    function reset() {
+  
+       }
+
+    function incrementWork(){      
+       workTime++    
+       document.getElementById('number').textContent = workTime;
+       document.getElementById('workframe').textContent = workTime;
+    }
+
+    function incrementBreak(){
+        breakTime++    
+        document.getElementById('breakframe').textContent = breakTime;
+    }
+
+    function decrementBreak(){   
+        breakTime--   
+        document.getElementById('breakframe').textContent = breakTime;
+    }
+
+    function decrementWork(){
+        workTime--    
+        document.getElementById('number').textContent = workTime;
+        document.getElementById('workframe').textContent = workTime;
+    }
+
+     function myClock() {
+       document.getElementById("number").textContent = --workTime;
+       if (workTime == 0) {
+        document.getElementById("number").textContent = --breakTime    
+       }
+     }
+
+
+  

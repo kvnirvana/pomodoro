@@ -1,0 +1,87 @@
+body {
+    background: url(../images/background.jpg);
+   
+}
+p {
+    text-align: center;
+
+}
+
+button {
+    
+    cursor: pointer;
+    background: #ADD8E6;
+    padding: 2%;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 1%;
+}
+
+#header {
+text-align: center;
+}
+
+.pomodoro {
+    width: 550px;
+    height: 450px;
+    border-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    background: #73AD21;
+    display: block;
+}
+
+.left-column {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 30%;
+}
+
+.right-column {
+    margin-top: 5%;
+   
+    width: 50%;
+}
+
+.break {
+    margin-top: 10%;
+}
+
+.display {
+    width: 150px;
+    height: 50px;
+    border-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    background: #ADD8E6;
+    display: block;
+    margin-top: 10%;
+}
+
+.buttons {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.workframe {
+    width: 15%;
+    background: #ADD8E6;
+    padding: 2%;
+    border-radius: 10px;
+    margin: 1%;
+}
+
+.breakframe {
+    width: 15%;
+    background: #ADD8E6;
+    padding: 2%;
+    border-radius: 10px;
+    margin: 1%;
+}
+
+.full {
+    width: 100%;
+    display: flex;
+}
