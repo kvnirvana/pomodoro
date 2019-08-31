@@ -63,11 +63,9 @@ document.getElementById('breakframe').textContent = Timebreak
        
 
             if (seconds == 0) {
-                if (minutes == 0) {
-                    
-                        happySmiley();
-                       
-                   
+                if (minutes == 0) {                   
+                        happySmiley();   
+                        Timbreak() 
                 }
                 minutes--;
                 if (minutes < 10) minutes = "0" + minutes;
@@ -81,30 +79,43 @@ document.getElementById('breakframe').textContent = Timebreak
             
         }
 
-        
-        sadSmiley()
-        function sadSmiley() {
-                var x = document.createElement("IMG");
-                x.setAttribute("src", "images/sad.png");
-                x.setAttribute("width", "304");
-                x.setAttribute("height", "228");
-                x.setAttribute("alt", "Sad");
-                document.body.appendChild(x);
+
+      
+        function Timbreak(){
+           
+            
+                Timebreak--;
+         
     
-                var element = document.getElementById("mood");
-                element.appendChild(x);
-             
-          }
+            document.getElementById("number").innerHTML = `${Timebreak}:${seconds}`
+            
+        }
+
+
+
 
          function happySmiley(){
-            var z = document.createElement("IMG");
-            z.setAttribute("src", "images/happy.png");
-            z.setAttribute("width", "304");
-            z.setAttribute("height", "228");
-            z.setAttribute("alt", "Happy");
-            var item = document.getElementById("mood")
+        // Create an empty element node
+        // without an ID, any attributes, or any content
+        var sp1 = document.createElement("img");
+        sp1.src = 'images/happy.png';
+        sp1.setAttribute('width', '200px');
 
-            item.replaceChild(x, z);
+        // Give it an id attribute called 'newSpan'
+        sp1.id = "newSpan";
+
+        // Create some content for the new element.
+        var sp1_content = document.createTextNode("new replacement span element.");
+
+        // Apply that content to the new element
+        sp1.appendChild(sp1_content);
+
+        // Build a reference to the existing node to be replaced
+        var sp2 = document.getElementById("mood");
+        var parentDiv = sp2.parentNode;
+
+        // Replace existing node sp2 with the new span element sp1
+        parentDiv.replaceChild(sp1, sp2);
         }
      
 
