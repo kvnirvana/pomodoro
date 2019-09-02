@@ -10,14 +10,14 @@
 <body>
 <div id='wrapper' >
     <div id='header'>
-        <h1>Pomodoro</h1>
+        <h1 id="headline">The Pomodoro Emoji</h1>
     </div>
     
     <div class="pomodoro">
         <div class="full">
             <div class="left-column">
                 <div class="work">
-                    <button type="button" id="work">Work</button>
+                    <div id="work">Work</div>
                         <div id ="workframe" class="workframe"></div>
                         <div class="workButtons">
                             <button type="button" id="workAdd">+</button>              
@@ -25,7 +25,7 @@
                         </div>
                 </div>
                 <div class="break">
-                    <button type="button" id="break">Break</button>
+                    <div id="break">Break</div>
                     <div id ="breakframe" class="breakframe"></div>
                     <div class="breakButtons">
                         <button type="button" id="breakAdd">+</button>              
@@ -36,6 +36,7 @@
             
 
         <div class="right-column">
+            <div><h1 id="timeToWork">Time to work</h1></div>
         <div class="display" id="display">
             <p class="number" id="number"></p>              
         </div>

@@ -11,7 +11,7 @@ document.getElementById("reset").addEventListener("click", reset);
 
 // Variables
 let minutes = 1
-let seconds = 10
+let seconds = 0
 let Timebreak = 5
 
 
@@ -21,8 +21,12 @@ document.getElementById('breakframe').textContent = Timebreak
 
 
 // Functions
+display()
+function display(){
+    if(seconds.toString().length < 2) seconds = "0"+seconds;
+    
     document.getElementById('number').textContent = `${minutes}:${seconds}`
-
+}
 
    function play() {
         myTimer = setInterval(myClock, 1000);
@@ -33,7 +37,9 @@ document.getElementById('breakframe').textContent = Timebreak
     }
 
     function reset() {
-  
+        pause();
+        count = minutes;
+        display();
        }
 
     function incrementWork(){      
@@ -60,7 +66,7 @@ document.getElementById('breakframe').textContent = Timebreak
 
        
         function myClock() {  
-       
+
 
             if (seconds == 0) {
                 if (minutes == 0) {                   
@@ -74,7 +80,7 @@ document.getElementById('breakframe').textContent = Timebreak
             else seconds--;
     
             if (seconds < 10) seconds = "0" + seconds;
-    
+            
             document.getElementById("number").innerHTML = `${minutes}:${seconds}`
             
         }
@@ -116,6 +122,27 @@ document.getElementById('breakframe').textContent = Timebreak
 
         // Replace existing node sp2 with the new span element sp1
         parentDiv.replaceChild(sp1, sp2);
+
+
+//Time for break
+        var sp11 = document.createElement("p");
+
+
+        // Give it an id attribute called 'newSpan'
+        sp11.id = "timeForABreak";
+
+        // Create some content for the new element.
+        var sp11_content = document.createTextNode("Time for a break");
+
+        // Apply that content to the new element
+        sp11.appendChild(sp11_content);
+
+        // Build a reference to the existing node to be replaced
+        var sp21 = document.getElementById("timeToWork");
+        var parentDiv = sp21.parentNode;
+
+        // Replace existing node sp2 with the new span element sp1
+        parentDiv.replaceChild(sp11, sp21);
         }
      
 
