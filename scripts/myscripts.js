@@ -9,7 +9,7 @@ document.getElementById("reset").addEventListener("click", reset);
 
 
 // Variables
-let minutes = 25
+let minutes = 1
 let seconds = 0
 let Timebreak = 5
 
@@ -91,23 +91,16 @@ display()
         }
 
 
-
-
-         function happySmiley(){
+    function happySmiley(){
         // Create an empty element node
         // without an ID, any attributes, or any content
         var sp1 = document.createElement("img");
         sp1.src = 'images/happy.png';
         sp1.setAttribute('width', '200px');
 
-        // Give it an id attribute called 'newSpan'
+        // Give it an id attribute 
         sp1.id = "newSpan";
 
-        // Create some content for the new element.
-        var sp1_content = document.createTextNode("new replacement span element.");
-
-        // Apply that content to the new element
-        sp1.appendChild(sp1_content);
 
         // Build a reference to the existing node to be replaced
         var sp2 = document.getElementById("mood");
@@ -117,13 +110,12 @@ display()
         parentDiv.replaceChild(sp1, sp2);
 
 
-        //Time for break
-        var sp11 = document.createElement("p");
+        //Time for break - create element
+        var sp11 = document.createElement("h1");
 
-
-        // Give it an id attribute called 'newSpan'
+        // Give it an id attribute 
         sp11.id = "timeForABreak";
-
+        sp11.style.textAlign = "center";
         // Create some content for the new element.
         var sp11_content = document.createTextNode("Time for a break");
 
